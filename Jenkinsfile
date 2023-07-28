@@ -13,7 +13,7 @@ pipeline {
                 bat 'mvn clean package'
             }
         }
-mù
+
         stage('Test') {
             steps {
                 bat 'mvn test'
