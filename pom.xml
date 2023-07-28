@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.example</groupId>
-    <artifactId>demo17</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <name>demo17</name>
+    <artifactId>todoList</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>todoList</name>
     <packaging>war</packaging>
 
     <properties>
