@@ -1,4 +1,4 @@
-Context pathpipeline {
+pipeline {
     agent any
 
     stages {
