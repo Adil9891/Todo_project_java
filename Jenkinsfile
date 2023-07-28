@@ -13,7 +13,7 @@ pipeline {
                 bat 'mvn clean package'
             }
         }
-
+mù
         stage('Test') {
             steps {
                 bat 'mvn test'
@@ -22,10 +22,10 @@ pipeline {
 
         stage('Deploy to Tomcat') {
             environment {
-                TOMCAT_HOME = 'C:/Program Files/Apache Software Foundation/Tomcat 9.0' // Remplacez cela par le chemin d'accès à votre installation de Tomcat
+                TOMCAT_HOME = 'C:/Program Files/Apache Software Foundation/Tomcat 9.0'
             }
             steps {
-                bat "\"robocopy target \"${TOMCAT_HOME}/webapps\" Todo_project_java.war /IS /IT\""
+                bat "\"robocopy target \"${TOMCAT_HOME}/webapps\" todo_app.war /IS /IT\""
                 bat "\"${TOMCAT_HOME}/bin/shutdown.bat\""
                 sleep 10
                 bat "\"${TOMCAT_HOME}/bin/startup.bat\""
