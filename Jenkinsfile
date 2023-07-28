@@ -25,10 +25,10 @@ pipeline {
                 TOMCAT_HOME = 'C:/Program Files/Apache Software Foundation/Tomcat 9.0'
             }
             steps {
-                bat "xcopy /Y target\\todoList-0.0.1-SNAPSHOT.war \"${TOMCAT_HOME}\\webapps\""
-                bat "${TOMCAT_HOME}\\bin\\shutdown.bat"
+                bat "xcopy /Y target\\todoList-0.0.1-SNAPSHOT.war \"${TOMCAT_HOME}/webapps\""
+                bat "\"${TOMCAT_HOME}/bin/shutdown.bat\""
                 sleep 10
-                bat "${TOMCAT_HOME}\\bin\\startup.bat"
+                bat "\"${TOMCAT_HOME}/bin/startup.bat\""
             }
         }
     }
